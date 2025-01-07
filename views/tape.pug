@@ -1,0 +1,177 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Your Website Title
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous")
+    link(rel="stylesheet" href="../style.css")
+  body
+    .container(style="max-width: 900px")
+      section.mt-4
+        .d-flex.flex-column.justify-content-between
+          img.logo(src="img/logo_cpl.svg" alt="CPL Logo")
+          .d-flex.justify-content-between.mt-2
+            p(style="font-family: 'Spectral'; font-weight: 700; font-size: larger; color: #555;")=day
+            p(style="font-family: 'Spectral'; font-weight: 300; font-size: normal; color: #555;")=time
+            p(style="font-family: 'Spectral'; font-weight: 300; font-size: normal; color: #555;")
+              img.icon(src="img/icon_location.svg" alt="Location Icon" style="height: 1.2em")
+              | Main Branch, Downtown
+      
+      section
+        .divider-thick
+        .row
+          .col-12
+            .d-flex.align-items-center
+              .me-3
+                img.icon(src="img/icon_open book.svg" alt="Read Icon")
+              div
+                h2.section-title READ
+            div
+              p=intro
+            hr
+            div.mb-2
+                span=yearStr
+                span  | 
+                span=genre
+                span  | 
+                span=topics
+                
+            div
+              h3.section-title=title
+              p.mt-2(style=" font-size: 14px; font-weight: normal;")=author.toUpperCase()
+            div.my-4
+              p.pre-wrap.drop-cap=content
+              // The rest of your paragraph
+              p(style="text-align: center; color: gray;") ***
+            //- div.col-12.d-flex.flex-column.align-items-center.justify-content-center(style='min-height: 100px;')
+            //-   div
+            //-     h5 Check out the book from the catalogue:
+            //-   img(src=`readImg/read0001.jpg` alt="Chess Problem" width="50%")
+            hr
+            div
+              //span.fw-.fs-5=curator 
+              span.fw-.fs-5 Librarian's note
+              span : 
+              span=comment
+
+      // Chess Section
+      each puzzle in puzzles   
+        section
+          .divider-thick
+          .row
+            .col-12
+              .d-flex.align-items-center
+                .me-3
+                  img.icon(src=`img/icon_${puzzle.type}.svg` alt="Puzzle Icon")
+                div
+                  h2.section-title=puzzle.type.toUpperCase()
+              div
+                p=puzzle.intro
+              hr
+              div
+                //h3.section-title Black to move
+              div
+                img(src=`puzzles/${puzzle.img}.jpg` alt="Chess Problem" width="100%")
+              div
+              // Conditional rendering based on puzzle.type
+              if puzzle.type != "chess"
+                // Specific content for Chess puzzles
+                hr
+                div
+                  p Solution:
+                div
+                // Example: Chess-specific content
+                img(src=`puzzles/${puzzle.img}_solution.jpg` alt="Chess Problem" width="100%")
+              
+      section
+          .divider-thick
+          .row
+            .col-12
+              .d-flex.align-items-center
+                .me-3
+                  img.icon(src=`img/icon_chess.svg` alt="Art Icon")
+                div
+                  h2.section-title Collection Highlight
+              div
+                p Produced between 1933 and 1934, 'Dominance of the City', is Coltman’s masterpiece. The huge painting is a mural triptych, consisting of three separate and distinct panels depicting specific areas of Cleveland. The largest part, the middle segment, displays a bridge rising over the Cuyahoga River near the Flats. The left portion depicts the Ohio Bell building, and the right panel portrays St. Theodosius Church in the Tremont neighborhood. 'Dominance of the City' can be found at the Cleveland Public Library Main Branch on the 3rd Floor in the Cleveland Digital Public Library.
+              hr
+              div
+                //h3.section-title Black to move
+              div
+                img(src=`collections/art_000001.jpg` alt="Chess Problem" width="100%")
+              div
+
+      
+      // TODO Section
+      section
+        .divider-thick
+        .row
+          .col-12
+            .d-flex.align-items-center
+              .me-3
+                img.icon(src="img/icon_todo.svg" alt="Read Icon")
+              div
+                h2.section-title DON'T FORGET
+            div
+              p
+            div
+              h5 Upcoming Events at the Library:
+            div
+              hr
+              ul
+                li.mb-2
+                  div
+                    strong(style="font-family: 'Spectral'; font-size: larger") The BAND, by FriendsWithYou
+                  div Join artists Samuel Borkson & Arturo Sandoval III of FriendsWithYou for the unveiling of The BAND, a dancing ensemble of five fuzzy dancing robots.
+                  br
+                  div(style="color: gray") Saturday, October 26 | 12:00 a.m. – 2:00 p.m.
+                  div(style="color: gray") Main Library, 1st Floor - Brett Hall | 325 Superior Ave.
+                li.mb-2
+                  div
+                    strong(style="font-family: 'Spectral'; font-size: larger") Cleveland READS at the West Side Market
+                  div Feed your need to read! Stop by our stall in the produce pavilion at the West Side Market (1979 West 25 St.) and choose FREE books for adults, kids, and teens.  While you're there, discover all the amazing programs, events, and resources waiting for you at your neighborhood library. 
+                  br
+                  div(style="color: gray") Saturday, October 26 | 10:00 a.m. – 2:00 p.m.
+                  div(style="color: gray") West Side Market
+                li.mb-2
+                  div
+                    strong(style="font-family: 'Spectral'; font-size: larger") Chinese Ink Painting –Animals
+                  div A workshop that presents some simple techniques to paint animals such as dragons, tigers and pandas with a brush and black ink. Please come, learn and enjoy. Brushes, paper and ink will be provided. 
+                  br
+                  div(style="color: gray") Saturday, October 26 | 12:00 p.m. – 3:30 p.m.
+                  div(style="color: gray") Main Library, 4th Floor - Northeast Corner Room | 325 Superior Ave.
+      
+      //- section
+      //-   .divider-thick
+      //-   .row.d-flex.justify-content-center
+      //-     .col-12.d-flex.flex-column.align-items-center.justify-content-center(style='min-height: 100px;')
+      //-         div
+      //-           h5 Scan to read on your phone:
+      //-         #qrcode
+
+      footer
+        .container.text-center
+          p &copy; 2024 Cleveland Public Library
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js")
+    script.
+        window.onload = function() {
+            // URL you want to encode
+            
+            let url = `http://10.1.8.87:3001/tape/${!{JSON.stringify(id)}}`;
+
+            // Generate the QR code
+            //new QRCode(document.getElementById("qrcode"), url);
+
+            //- console.log("Page and all resources are fully loaded");
+            //- window.print();
+            //- setTimeout(function() {
+            //- window.location.href = '/';
+            //- }, 1000); 
+
+
+        }

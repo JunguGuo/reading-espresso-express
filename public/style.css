@@ -1,0 +1,433 @@
+@media print {
+  @page {
+    size: portrait;
+  }
+}
+
+/* Font */
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-Regular.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* Extra Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-ExtraLight.ttf') format('truetype');
+  font-weight: 200; /* Extra Light weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-Light.ttf') format('truetype');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* Semi Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('fonts/Spectral-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Black.ttf') format('truetype');
+  font-weight: 900; /* Black weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900; /* Black weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-ExtraLight.ttf') format('truetype');
+  font-weight: 200; /* ExtraLight weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200; /* ExtraLight weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Italic.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Light.ttf') format('truetype');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-LightItalic.ttf') format('truetype');
+  font-weight: 300; /* Light weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('fonts/WorkSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100; /* Thin weight */
+  font-style: italic;
+}
+.barcode-input {
+  outline: none;
+  border: 0px solid rgba(255, 255, 255, 0);
+  width: 0px;
+  height: 0px;
+}
+.barcode-input:focus {
+  outline: none; /* Removes the default outline */
+  border: 0px solid rgba(255, 255, 255, 0); /* Custom border color when focused */
+}
+
+/* Customize Page */
+.font-primary {
+  font-family: 'WorkSans';
+}
+
+.up-shadow {
+  box-shadow: 0px -1px 5px 0 rgba(25, 25, 25, 0.1);
+}
+
+/* Lib Card */
+.libcard-input {
+  font-size: 1.3rem;
+  min-width: 110%;
+  border-width: 2px;
+}
+
+/* Genre Tab */
+.tab-check {
+  display: none;
+}
+/* Style for all labels */
+.tab-group .tab {
+  color: rgb(168, 168, 168); /* Gray text */
+  border-bottom: 1px solid rgba(209, 209, 209, 0); /* Thin gray bottom border */
+  border-right: none; /* Ensure no right border by default */
+  width: 100%; /* Full width */
+  user-select: none;
+}
+
+.tab-group .tab-horizontal {
+  border-right: 1px solid rgb(209, 209, 209); /* Thin gray bottom border */
+  border-bottom: none; /* Ensure no right border by default */
+}
+
+/* Style when the radio button is checked */
+.tab-group .tab-check:checked + .tab {
+  color: black; /* Black text */
+  border-right: 5px solid #007bff; /* Blue right border */
+}
+
+/* Style when the radio button is checked */
+.tab-group .tab-check:checked + .tab-horizontal {
+  border-bottom: 5px solid #007bff; /* Blue right border */
+  border-right: 1px solid rgb(209, 209, 209);
+}
+
+/* Optional: Style for hover effect */
+.tab-group .tab:hover {
+  color: black; /* Light background on hover */
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: none; /* Hide the default checkbox */
+}
+
+.checkbox-label {
+  /* Initial label styles */
+  padding: 5px 20px;
+  color: #007bff;
+  border-radius: 50rem;
+  display: inline-block;
+  user-select: none;
+}
+
+.checkbox-label:hover {
+  cursor: pointer;
+  background-color: #007bff28;
+}
+
+/* Style for when the checkbox is checked */
+.checkbox-input:checked + .checkbox-label {
+  border: none;
+  background-color: #007bff; /* Change background color */
+  color: white; /* Change text color */
+}
+
+/* Existing styles from previous example */
+
+/* Bootstrap Overrides */
+.btn.start-button {
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 10px 25px;
+  color: #000; /* Adjust color as needed */
+  border-color: #000; /* Adjust border color as needed */
+}
+
+.btn.start-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Custom dropdown styles */
+.dropdown-toggle {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+}
+
+.dropdown-menu {
+  background-color: #f7f7f7; /* Light grey background */
+}
+
+.dropdown-item {
+  color: #333; /* Dark grey text */
+}
+
+.dropdown-item:hover {
+  background-color: #4caf50; /* Green background for hover */
+  color: white; /* White text for hover */
+}
+
+/*Tape Page*/
+/* .align-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+} */
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.logo {
+  max-width: 400px;
+  height: auto;
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 100%;
+  }
+}
+@media (min-width: 400px) {
+  .logo {
+    width: 40%;
+  }
+}
+/* Add your custom styles here */
+.placeholder-image {
+  background-color: #aaa;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.placeholder-image::after {
+  content: 'Placeholder';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+}
+
+/* Divider styles */
+.divider-thick {
+  height: 3px; /* Height of the dividing line */
+  background-color: #000; /* Color of the dividing line, change as needed */
+  width: 100%; /* Full width */
+  margin-bottom: 1rem; /* Space between the line and the section, adjust as needed */
+  margin-top: 3em;
+}
+
+/* Read Section styles */
+/* .d-flex {
+  align-items: flex-start; 
+  align-items: center;
+} */
+
+.icon {
+  height: 2em; /* This sets the icon's height relative to the font size */
+  width: auto; /* Maintains the icon's aspect ratio */
+}
+
+.section-title {
+  font-family: 'Spectral';
+  font-weight: 700;
+  margin-bottom: 0%;
+}
+
+.drop-cap {
+  font-family: 'Times New Roman', Times, serif;
+}
+.drop-cap::first-letter {
+  float: left;
+  font-size: 3em; /* Adjust the size as needed */
+  line-height: 1; /* Adjust line height to fit with the rest of the text */
+  padding-right: 0.1em; /* Adjust the right padding for spacing */
+  font-weight: bold; /* Optional: if you want the drop cap to be bold */
+  /* Add any additional styling you want for the drop cap */
+}
