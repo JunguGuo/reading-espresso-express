@@ -2,7 +2,10 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
+const compression = require('compression');
+
 const app = express();
+
 app.use(cors());
 
 const readRouter = require('./routes/readRoutes');
@@ -23,6 +26,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(express.json());
+
+app.use(compression());
 
 // ROUTES
 app.use('/', viewsRouter);
